@@ -1,0 +1,247 @@
+/* Estilos generales para el cuerpo de la página */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+ 
+  /* Estilos para el fondo del cuerpo de la página */
+  body {
+    background-color: #90ee90;
+  }
+  
+  /* Estilos para el contenedor principal */
+  .wrapper {
+    box-sizing: content-box;
+    width: 26.87em;
+    padding: 2.5em 3em;
+    background-color: #ffffff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 0.6em;
+    box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+  }
+  
+  /* Estilos para el contenedor del juego */
+  .game-container {
+    position: relative;
+    width: 100%;
+    display: grid;
+    gap: 0.6em;
+  }
+
+  /* Estilos para el contenedor de estadísticas */
+  .stats-container {
+    text-align: right;
+    margin-bottom: 1.2em;
+  }
+
+  /* Estilos para los elementos de estadísticas */
+  .stats-container span {
+    font-weight: 600;
+  }
+
+  /* Estilos para el contenedor de las tarjetas */
+  .card-container {
+    position: relative;
+    width: 6.25em;
+    height: 6.25em;
+    cursor: pointer;
+  }
+
+  /* Estilos para el frente y dorso de las tarjetas */
+  .card-before,
+  .card-after {
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #000000;
+    transition: transform 0.7s ease-out;
+    backface-visibility: hidden;
+  }
+
+  /* Estilos para el frente de las tarjetas */
+  .card-before {
+    background-color: #90ee90;
+    font-size: 2.8em;
+    font-weight: 600;
+  }
+
+  /* Estilos para el dorso de las tarjetas */
+  .card-after {
+    background-color: #ffffff;
+    transform: rotateY(180deg);
+  }
+
+  /* Estilos para las tarjetas volteadas */
+  .card-container.flipped .card-before {
+    transform: rotateY(180deg);
+  }
+
+  /* Estilos para las tarjetas desvolteadas */
+  .card-container.flipped .card-after {
+    transform: rotateY(0deg);
+  }
+
+  /* Estilos para el contenedor de los controles del juego */
+  .controls-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #90ee90;
+    top: 0;
+  }
+
+  /* Estilos para los botones del juego */
+  button {
+    border: none;
+    border-radius: 0.3em;
+    padding: 1em 1.5em;
+    cursor: pointer;
+  }
+
+  /* Estilos para el botón de detener el juego */
+  #stop {
+    font-size: 1.1em;
+    display: block;
+    margin: 1.1em auto 0 auto;
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  /* Estilos para los botones del contenedor de controles */
+  .controls-container button {
+    font-size: 1.3em;
+    box-shadow: 0 0.6em 2em rgba(86, 66, 0, 0.2);
+  }
+  .hide {
+    display: none;
+  }
+  #result {
+    text-align: center;
+  }
+  #result h2 {
+    font-size: 2.5em;
+  }
+  #result h4 {
+    font-size: 1.8em;
+    margin: 0.6em 0 1em 0;
+  }
+
+  #btnAyuda {
+    background-color: #FFC107; /* Cambia el color de fondo a amarillo */
+    color: #fff; /* Cambia el color del texto a blanco */
+    border: none; /* Elimina el borde */
+    padding: 10px 20px; /* Ajusta el espaciado interno */
+    border-radius: 5px; /* Agrega bordes redondeados */
+    font-size: 16px; /* Ajusta el tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  }
+  
+  #btnAyuda:hover {
+    background-color: #07bae7; /* Cambia el color de fondo a azul */
+    color: #fff; /* Cambia el color del texto a blanco */
+    border: none; /* Elimina el borde */
+    padding: 10px 20px; /* Ajusta el espaciado interno */
+    border-radius: 50px; /* Agrega bordes redondeados */
+    font-size: 24px; /* Ajusta el tamaño de fuente */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 1px; /* Ajusta el espaciado entre letras */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Agrega una sombra */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: transform 0.2s ease-in-out; /* Agrega una transición al hacer hover */
+    margin-top: 20px
+  }
+  
+
+  #start {
+    background-color: #007AFF; /* Cambia el color de fondo a azul */
+    color: #fff; /* Cambia el color del texto a blanco */
+    border: none; /* Elimina el borde */
+    padding: 10px 20px; /* Ajusta el espaciado interno */
+    border-radius: 50px; /* Agrega bordes redondeados */
+    font-size: 24px; /* Ajusta el tamaño de fuente */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 1px; /* Ajusta el espaciado entre letras */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Agrega una sombra */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: transform 0.2s ease-in-out; /* Agrega una transición al hacer hover */
+    margin-top: 10px
+  }
+  
+  #start:hover {
+    transform: translateY(-5px); /* Mueve el botón hacia arriba al hacer hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Agrega una sombra más grande */
+  }
+
+  #titulo {
+    text-align: center;
+    color: blue;
+   
+  }
+  #autores {
+    color: rgb(0, 0, 0);
+    margin-top: 100px;
+  }
+
+  #btninfo {
+    background-color: #07bae7; /* Cambia el color de fondo a azul */
+    color: #fff; /* Cambia el color del texto a blanco */
+    border: none; /* Elimina el borde */
+    padding: 10px 20px; /* Ajusta el espaciado interno */
+    border-radius: 50px; /* Agrega bordes redondeados */
+    font-size: 24px; /* Ajusta el tamaño de fuente */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 1px; /* Ajusta el espaciado entre letras */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Agrega una sombra */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: transform 0.2s ease-in-out; /* Agrega una transición al hacer hover */
+    margin-top: 20px
+  }
+  #imagen2 {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }  
+
+  #texto {
+    color: rgb(0, 0, 0);
+    margin-top: 50px;
+  }
+
+  #autores-container {
+    position: "center";
+    bottom: 0;
+    left: 0;
+    background-color: #b6f1d9;
+    padding: 10px;
+    border-top-right-radius: 10px;
+    border-color: #000000;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  
+  #autores {
+    margin: 0;
+    display: inline;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  #autores span {
+    font-weight: normal;
+  }
+  
+  

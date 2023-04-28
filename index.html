@@ -1,0 +1,55 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento -->
+
+<html lang="en"> <!-- Etiqueta de apertura de la etiqueta principal del documento, con especificación del idioma (inglés) -->
+
+<head> <!-- Encabezado del documento -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Metaetiqueta para la configuración del viewport del dispositivo -->
+  <title>Juego de Memoria</title> <!-- Título del documento -->
+  <!-- Google Fonts - Fuente de Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  
+  <!-- Hoja de estilos - Archivo CSS externo -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Icono de pestaña - Logo del juego -->
+  <link rel="icon" href="img/memory.png" />
+</head>
+
+<body> <!-- Cuerpo del documento -->
+  
+  
+  
+
+  <div class="wrapper"> <!-- Div contenedor principal con clase "wrapper" -->
+    <div class="stats-container"> <!-- Div contenedor para las estadísticas con clase "stats-container" -->
+      <div id="moves-count"></div> <!-- Div con ID "moves-count" para mostrar el contador de movimientos -->
+      <div id="time"></div> <!-- Div con ID "time" para mostrar el tiempo de juego -->
+    </div>
+    <div class="game-container"></div> <!-- Div contenedor del juego con clase "game-container" -->
+    <button id="stop" class="hide">Deneter Partida</button> <!-- Botón para detener la partida con ID "stop" y clase "hide" para ocultarlo inicialmente -->
+  </div>
+
+  
+
+  <div class="controls-container"> <!-- Div contenedor para los controles del juego con clase "controls-container" -->
+    <h1 id="titulo">Juego de memoria de cartas</h1>
+    <p id="result"></p> <!-- Párrafo con ID "result" para mostrar los resultados del juego -->
+    <button id="start">Iniciar Partida</button> <!-- Botón para iniciar la partida con ID "start" -->
+    <button id="btninfo" onclick="location.href='info.html'">Information</button>    
+    <div>
+      <button id="btnAyuda">AYUDA</button>
+    </div>
+      <div id="autores-container">
+        <p id="autores">integrantes: Kevin Largo</p>
+        <p id="autores"> Alexis Feria</p>
+        <p id="autores"> Aldair Arevalo</p>
+      </div>
+  </div>
+
+  
+
+  <!-- Script - Archivo JavaScript externo -->
+  <script src="script.js"></script>
+</body>
+
+</html> <!-- Etiqueta de cierre de la etiqueta principal del documento -->
